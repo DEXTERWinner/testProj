@@ -1,5 +1,6 @@
 from django.db import models
 
+	
 class Student(models.Model):
 	last_name = models.CharField(max_length=40)
 	first_name = models.CharField(max_length=30)
@@ -7,6 +8,7 @@ class Student(models.Model):
 	birthday = models.DateField()
 	stud_card = models.CharField(max_length=10)
 	group = models.ForeignKey(Group)
+	
 	
 class Group(models.Model):
 	name = models.CharField(max_length=10)
